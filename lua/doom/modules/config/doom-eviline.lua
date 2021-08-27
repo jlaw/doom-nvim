@@ -72,7 +72,7 @@ return function()
           t = colors("red"),
         }
         vim.api.nvim_command("hi GalaxyViMode guifg=" .. mode_color[vim.fn.mode()]())
-        return "  "
+        return " "
       end,
       highlight = { colors("red"), colors("bg"), "bold" },
     },
@@ -180,10 +180,10 @@ return function()
         -- Check if there's a LSP client running to avoid redundant
         -- statusline elements
         if lsp.get_lsp_client() ~= "No Active Lsp" then
-          return string.format(" %s » %s ", vim.bo.filetype, lsp.get_lsp_client())
+          return string.format("%s » %s ", vim.bo.filetype, lsp.get_lsp_client())
         else
           -- Use the filetype instead
-          return string.format(" %s ", vim.bo.filetype)
+          return string.format("%s ", vim.bo.filetype)
         end
       end,
       condition = function()
@@ -201,7 +201,7 @@ return function()
   gls.right[4] = {
     GitIcon = {
       provider = function()
-        return " "
+        return ""
       end,
       condition = condition.check_git_workspace,
       highlight = { colors("red"), colors("bg") },
@@ -229,7 +229,7 @@ return function()
     DiffAdd = {
       provider = "DiffAdd",
       condition = condition.hide_in_width,
-      icon = " ",
+      icon = "",
       highlight = { colors("green"), colors("bg") },
     },
   }
@@ -237,7 +237,7 @@ return function()
     DiffModified = {
       provider = "DiffModified",
       condition = condition.hide_in_width,
-      icon = " ",
+      icon = "",
       highlight = { colors("orange"), colors("bg") },
     },
   }
@@ -245,7 +245,7 @@ return function()
     DiffRemove = {
       provider = "DiffRemove",
       condition = condition.hide_in_width,
-      icon = " ",
+      icon = "",
       highlight = { colors("red"), colors("bg") },
     },
   }

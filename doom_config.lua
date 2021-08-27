@@ -64,7 +64,7 @@ M.config = {
     -- false : no swap files
     -- true  : enables swap files
     -- @default = false
-    swap_files = false,
+    swap_files = true,
 
     -- Undo Directories
     -- the backup variable enables backup related settings (undofile, undodir)
@@ -73,13 +73,13 @@ M.config = {
     -- @default = false
     -- WARNING: if you change this to false and you have an undo dir already,
     --          it will REMOVE the undodir (loss of data might take place)
-    backup = false,
+    backup = true,
 
     -- Enable Line wrapping
     -- false : disables line wrapping
     -- true  : enables line wrapping
     -- @default = false
-    line_wrap = false,
+    line_wrap = true,
 
     -- Enable Show mode ( -- INSERT --, -- NORMAL --, -- VISUAL -- )
     -- false : disables show mode
@@ -104,7 +104,7 @@ M.config = {
     -- false : Disable preservation of last editing position
     -- true  : Enable preservation of last editing position
     -- @default = false
-    preserve_edit_pos = false,
+    preserve_edit_pos = true,
 
     -- Allow overriding the default Doom Nvim keybinds
     -- false : Default keybinds cannot be overwritten
@@ -138,7 +138,7 @@ M.config = {
 
     -- Use clipboard outside of vim
     -- false : won't use third party clipboard
-    -- true  : enables third part clipboard
+    -- true  : enables third party clipboard
     -- @default = true
     clipboard = true,
 
